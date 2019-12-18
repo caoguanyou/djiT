@@ -1,0 +1,24 @@
+{
+  "name": "dji",
+  "version": "1.0.0",
+  "description": "dji-web-test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/caoguanyou/djiT.git"
+  },
+  "author": "cao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caoguanyou/djiT/issues"
+  },
+  "homepage": "https://github.com/caoguanyou/djiT#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "swiper": "^5.2.1"
+  }
+}
