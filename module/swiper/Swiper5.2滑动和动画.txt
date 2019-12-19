@@ -1,3 +1,0 @@
-swiper.animate1.0.3.min.js
-
-swiper-5.2.0.zip
