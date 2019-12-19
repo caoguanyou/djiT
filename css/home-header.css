@@ -1,0 +1,405 @@
+
+
+body{
+    /*todo:待删除背景颜色*/
+    background-color: rgb(122, 107, 107);
+    color: red;
+}
+
+.site-header{
+    width: 1230px;
+    margin: 0 auto;
+    background-color: transparent;
+    background-color: gold;
+
+}
+.wrap-header{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 90px auto;
+    font-size: 14px;
+    /*position: relative;*/
+}
+.header-logo{
+    position: relative;
+}
+.header-logo .logo{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 45px;
+    height: 26px;
+    background-image: url("../images/logo.svg");
+    background-size: cover;
+}
+.header-nav-user{
+    /*display: flex;*/
+}
+.header-nav-user .header-nav{
+    float: left;
+    display: flex;
+
+}
+/*导航栏的hover样式*/
+.header-nav>li>a{
+    display: inline-block;
+    padding: 25px 16px;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 600;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+}
+.header-nav>li>a::after{
+    content: "";
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid #0f0f0f;
+}
+.header-nav>li>a:hover::after{
+    display: block;
+}
+
+.nav-menu{
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    top: 64px;
+    left: 0;
+}
+.nav-menu-wrap{
+    padding: 20px 0 ;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* sub-nav-top */
+.nav-menu .nav-menu-wrap1 {
+    width: 1200px;
+    margin: 0 auto;
+}
+.header-nav .sub-nav-top ul{
+    display:flex;
+}
+.header-nav .sub-nav-top ul>li {
+    flex: 1;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #f0f1f2;
+   
+}
+
+.sub-nav-top ul>li>a{
+    flex: 1;
+    display:flex;
+    align-items:center;
+    height: 72px;
+    padding: 0 24px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    position:relative
+}
+.sub-nav-top ul>li>a.a-def::before {
+   content:'';
+   width:2px;
+   background-color:#3b3e40;
+   background-color:#d4d7d9;
+   height: 50%;
+   position:absolute;
+   left: 0;
+}
+.sub-nav-top ul>li>a.a-def:hover::before {
+    background-color: #3b3e40;
+}
+.sub-nav-top ul>li>a>span.icon-site{
+    display: inline-block;
+    width:20px;
+    height: 14px;
+    margin:0 10px;
+    background-image: url('../images/icon-site.svg');
+    background-size: cover;
+}
+.nav-type1 .sub-nav-def{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+.nav-type1 .sub-nav-def .space-shu{
+    width: 24px;
+    position: relative;
+}
+.nav-type1 .sub-nav-def .space-shu::after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    display: block;
+    height: 90%;
+    width: 1px;
+    background-color: #f0f1f2;
+}
+.nav-type1 .sub-nav-def .space-heng::after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #f0f1f2;
+}
+.nav-type1 .sub-nav-def .space-heng{
+    height: 48px;
+    width: 100%;
+    position: relative;
+}
+.nav-type1 .sub-nav-def .grid-container{
+    flex: 1;
+}
+.nav-type1 .sub-nav-def>div{
+    display: flex;
+}
+.nav-type1 .sub-nav-btn{
+    display: flex;
+    padding-bottom: 32px;
+}
+.nav-type1 .dji-balance{
+    padding: 12px 16px 12px 28px;
+    margin-right: 24px;
+    border-radius: 5px;
+    border: none;
+}
+.nav-type1 .dji-balance span{
+    display: inline-block;
+    margin-top: 4px;
+    margin-left: 20px;
+    width: 14px;
+    height: 14px;
+    background-image: url("../images/menu.svg");
+    background-size: cover;
+}
+/*探索精神*/
+.nav-6{
+    position: relative;
+}
+.nav-6 .nav-menu {
+    left: -32px;
+}
+.nav-6 .nav-menu .ga-data{
+    width: 88px;
+    box-sizing: content-box;
+    padding:16px 32px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 12px;
+    display: block;
+    background-color: #fff;
+}
+.nav-6 .nav-menu .ga-data:hover{
+    background-color: #e2e2e2;
+}
+
+/*服务与支持*/
+.nav-7{
+
+}
+.nav-7 .nav-menu {
+
+}
+.nav-7 .nav-menu .nav-menu-wrap{
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 24px 0 48px;
+}
+
+.nav-7 .nav-menu .nav-menu-wrap>div{
+    flex: 1;
+}
+.nav-7 .nav-menu .space-shu{
+    width: 48px;
+    /*height: 100px;*/
+    position: relative;
+}
+.nav-7 .nav-menu .space-shu::after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    display: block;
+    height: 90%;
+    width: 1px;
+    background-color: #f0f1f2;
+}
+.nav-7 .grid-container div>a{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #3b3e40;
+}
+.nav-7 .grid-container div>p{
+    display: block;
+    font-size: 12px;
+    margin-bottom: 16px;
+    color: #6c7073;
+}
+.nav-7 .grid-container div li>a{
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #303233;
+}
+.nav-7 .grid-container div li>a:hover{
+    text-decoration: underline;
+}
+
+.product-img img{
+    width: 160px;
+    height: 160px;
+}
+.product-link{
+    padding-left:20px ;
+}
+.product-link>a{
+    display: block;
+    font-size: 14px;
+    color: #0f0f0f;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+.product-link>p{
+    font-size: 12px;
+    color: #3c3c3c;
+    margin-bottom: 16px;
+}
+.product-link .nav-item>a{
+    display: block;
+    margin-bottom: 8px;
+
+}
+.product-link .nav-item>a:hover{
+    text-decoration: underline;
+}
+
+
+
+/*搜索&用户*/
+.header-nav-user .header-user{
+    float: right;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+.header-user .shops{
+    margin-right: 20px ;
+}
+.search-pic{
+    width: 24px;
+    height: 24px;
+    background-image: url('../images/search.svg');
+    background-size: cover;
+    background-color: greed;
+    margin: 20px 12px;
+    cursor: pointer;
+}
+.login-register-pic{
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url('../images/user.svg');
+    background-size: cover;
+    margin: 20px 12px;
+    cursor: pointer;
+}
+/*登陆&注册默认隐藏hover*/
+.login-register:hover .sub-login-register{
+    display: block;
+}
+.login-register .sub-login-register li:hover{
+    background-color: #f2f2f2;
+}
+.sub-login-register{
+    display: none;
+    position: absolute;
+    top:85px;
+    right: 0;
+    background-color: #fff;
+    cursor: pointer;
+}
+.sub-login-register li{
+    padding: 16px 32px;
+}
+.login::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: -20px;
+    width: 0px;
+    height: 0px;
+    right: 15px;
+    border: 10px solid transparent;
+    border-bottom-color: #fff;
+}
+
+
+/*search-bar 默认隐藏*/
+.search-bar{
+    box-sizing: border-box;
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    padding: 20px 0;
+    
+    width:calc(1230px - 90px );
+    float: right;
+    grid-template-columns: 224px 1fr 24px;
+}
+.search-bar .search-btn{
+    margin-left: 200px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/search-b.svg");
+    background-size: cover;
+    cursor: pointer;
+}
+.search-bar .search-close{
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/close.svg");
+    background-size: cover;
+    float: right;
+    cursor: pointer;
+}
+.search-bar .search-body{
+    margin-right: 200px;
+    box-sizing: content-box;
+    background-size: cover;
+}
+.search-bar .search-body input{
+    width:100%;
+    height: 100%;
+    border: none;
+    padding: 4px 8px;
+    height: 24px;
+}

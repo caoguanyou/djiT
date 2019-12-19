@@ -18,19 +18,23 @@ let load = require('gulp-load-plugins')();//自动加载模块
 gulp.task('concatCss',function (done) {//合并css
     gulp.src('./css/*.css')//获取文件
         .pipe(load.concat('index.css'))//合并并命名文件
+        .pipe(gulp.dest('./dist/css'));//存放文件
+    gulp.src('./css/*.css')//获取文件
+        .pipe(load.concat('index.css'))//合并并命名文件
         .pipe(load.minifyCss())//压缩
         .pipe(load.rename('index.min.css'))
-        .pipe(gulp.dest('./dist/css'));//存放文件
+        .pipe(gulp.dest('./dist/css'))//存放文件
+        .pipe(load.connect.reload());
     done();//结束
 });
 
-gulp.task('uglifyCss',function (done) {//压缩css
-    gulp.src('./dist/css/*.css')
-        .pipe(load.minifyCss())
-        .pipe(gulp.dest('./dist/css/'))
-        .pipe(load.connect.reload());
-    done();
-});
+// gulp.task('uglifyCss',function (done) {//压缩css
+//     gulp.src('./dist/css/*.css')
+//         .pipe(load.minifyCss())
+//         .pipe(gulp.dest('./dist/css/'))
+//
+//     done();
+// });
 gulp.task('moduleCss', function (done) {
     gulp.src('./module/css/*.css')
         .pipe(gulp.dest('./dist/css'));
@@ -85,7 +89,7 @@ gulp.task('minifyHtml',function (done) {//合并
 
 
 gulp.task('watchs',function (done) {
-    gulp.watch('./css/*.css',gulp.series('concatCss','uglifyCss'));
+    gulp.watch('./css/*.css',gulp.series('concatCss'));
     gulp.watch('./js/*.js', gulp.series('concatJs'));
     gulp.watch('./images/*.*',gulp.series('imageMin'));
     gulp.watch('./*.html', gulp.series('minifyHtml'));
@@ -103,7 +107,7 @@ gulp.task('reload',function (done) {
 gulp.task('start', gulp.series('reload', 'watchs'));
 
 gulp.task('build', gulp.parallel(
-    gulp.series('concatCss', 'uglifyCss', 'moduleCss'),
+    gulp.series('concatCss', 'moduleCss'),
     gulp.series('concatJs', 'uglifyJq','moduleJs'),
     gulp.series('imageMin'),
     gulp.series('minifyHtml'),
