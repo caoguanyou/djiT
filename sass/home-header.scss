@@ -1,0 +1,420 @@
+
+@mixin min-pic_24x24{
+  width: 24px;
+  height: 24px;
+}
+.site-header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header-logo-nav{
+  width: 100%;
+  background-color: transparent;
+  .header-logo-nav-wrap{
+    width: 1230px;
+    margin: 0 auto;
+    display: flex;
+  }
+}
+.header-logo{
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  .logo{
+    width: 45px;
+    height: 26px;
+    background-image: url("../images/logo.svg");
+    background-size: cover;
+  }
+}
+.header-nav-user{
+
+  width: calc(100% - 90px);
+  display: flex;
+  .header-nav{
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .header-nav-item{
+      a.nav-title{
+        display: inline-block;
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: bold;
+        padding: 25px 16px;
+        position: relative;
+        &:hover::after{
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 0px;
+          left: 50%;
+          transform: translate(-50%);
+          height: 2px;
+          width: 80%;
+          background-color: #000000;
+        }
+      }
+      //todo:等其他东西写完再写
+      .nav-menu{
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        img{
+          width: 160px;
+          height: 160px;
+        }
+
+      }
+    }
+  }
+  .header-user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;//给登陆&注册定位用
+    .shops{
+      cursor: pointer;
+      font-size: 14px;
+      padding: 8px 16px;
+      margin-right: 20px;
+    }
+    .search{
+      cursor: pointer;
+      @include min-pic_24x24;
+      background-image: url("../images/search.svg");
+      background-size: cover;
+      margin-right: 20px;
+    }
+    .login-register{
+      margin-right: 20px;
+      height: 100%;
+      padding: 20px 12px;
+      &:hover .login-register-sub{
+        display: block;
+      }
+      .login-register-pic{
+        cursor: pointer;
+        @include min-pic_24x24;
+        display: inline-block;
+        vertical-align: middle;
+        background-image: url("../images/user.svg");
+        background-size: cover;
+
+      }
+    }
+  }
+}
+
+/*二级导航菜单*/
+.nav-menu-wrap{
+  width: 1200px;
+  margin: 0 auto;
+  .sub-nav-def{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    .space-shu{
+      width: 24px;
+      position: relative;
+      &::before{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        content: "";
+        display: block;
+        width: 1px;
+        background-color: #f0f1f2;
+      }
+    }
+    .space-heng{
+      height: 48px;
+      width: 100%;
+      position: relative;
+      &::before{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        content: "";
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: #f0f1f2;
+      }
+    }
+    .grid-container{
+      flex: 1;
+      display: flex;
+    }
+
+  }
+  .sub-nav-btn{
+    width: 1200px;
+    margin: 0 auto;
+    .grid-container{
+    }
+  }
+
+}
+/*二级菜单top*/
+.nav-menu-wrap1{
+  width: 100%;
+  .sub-nav-top{
+    width: 1200px;
+    margin: 0 auto;
+    ul.grid-container{
+      display: flex;
+      li.cell{
+        flex: 1;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        border-left: 1px solid #f0f1f2;
+      }
+      a{
+        flex: 1;
+        display:flex;
+        align-items:center;
+        height: 72px;
+        padding: 0 24px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        position:relative;
+      }
+      .a-def::before{
+        content:'';
+        width:2px;
+        background-color:#d4d7d9;
+        height: 50%;
+        position:absolute;
+        left: -1px;
+      }
+      .a-def:hover::before{
+        background-color:#3b3e40;
+      }
+    }
+  }
+
+}
+
+
+//nav-1~5
+.nav-type1 .sub-nav-def{
+  padding-top: 24px;
+}
+.nav-type1 .sub-nav-btn{
+  padding-bottom: 32px;
+}
+.nav-type1 .sub-nav-def .product-link {
+  padding-left: 20px;
+}
+.nav-type1 .sub-nav-def .product-link .product-head{
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #3b3e40;
+  display: block;
+}
+.nav-type1 .sub-nav-def .product-link p{
+  font-size: 12px;
+  margin-bottom: 16px;
+  color: #6c7076;
+}
+.nav-type1 .sub-nav-def .product-link li a{
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 8px;
+  color: #3b3e40;
+  display: block;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+.nav-type1 .sub-nav-btn .dji-nav-item-btn{
+  padding: 12px 16px 12px 28px;
+  margin-right: 24px;
+  border-radius: 5px;
+  border: none;
+  line-height: 14px;
+  span{
+    display: inline-block;
+    margin-top: 4px;
+    margin-left: 20px;
+    width: 14px;
+    height: 14px;
+    background-image: url("../images/menu.svg");
+    background-size: cover;
+  }
+}
+
+.nav-6{
+  position: relative;
+}
+.nav-6 .nav-menu{
+  left: -32px!important;
+  position: absolute;
+  //todo:待删除背景颜色
+  a.ga-data{
+    width: 88px;
+    box-sizing: content-box;
+    padding:16px 32px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 12px;
+    display: block;
+    background-color: #fff;
+    &:hover{
+      background-color: #e2e2e2;
+    }
+  }
+}
+
+.nav-7 .nav-menu-wrap{
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 24px 0 48px;
+  .grid-container{
+    flex: 1;
+    a.ga-data{
+      display: block;
+      font-size: 16px;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #3b3e40;
+    }
+    p.font-opensans{
+      display: block;
+      font-size: 12px;
+      margin-bottom: 16px;
+      color: #6c7073;
+    }
+    li.nav-item a.nav-item-link{
+      display: block;
+      font-size: 14px;
+      margin-bottom: 8px;
+      font-weight: normal;
+      color: #303233;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  .space-shu{
+    width: 48px;
+    position: relative;
+    &::after{
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      content: "";
+      display: block;
+      height: 90%;
+      width: 1px;
+      background-color: #f0f1f2;
+    }
+  }
+}
+
+.login-register-sub{
+  position: absolute;
+  padding-top:20px ;
+  right: 0;
+  top: 60px;
+  background-color: transparent;
+  display: none;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    width: 0px;
+    height: 0px;
+    border: 10px solid transparent;
+    border-bottom-color: #fff;
+  }
+
+  li{
+    padding: 16px 22px;
+    &:hover{
+      background-color: #d4d7d9;
+      cursor: pointer;
+    }
+    a{
+      font-size: 12px;
+      line-height: 12px;
+
+    }
+  }
+}
+.search-bar{
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #fff;
+  &-wrap {
+    width: 1230px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.search-bar-wrap-logo{
+  width: 90px;
+  .logo{
+    width: 45px;
+    height: 25px;
+    background-image: url("../images/logo-b.svg");
+    background-size: cover;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+.search-bar-wrap-btn{
+  margin-left: 200px;
+  @include min-pic_24x24;
+  background-image: url("../images/search-b.svg");
+  background-size: cover;
+  position: relative;
+  left: 60px;
+}
+.search-bar-wrap-body{
+  flex: 1;
+  padding: 16px 0;
+  position: relative;
+  left: 600px;
+  input{
+    border: none;
+    height: 32px;
+    padding: 4px 8px;
+    color: #000000;
+    width: 100%;
+  }
+}
+.search-bar-wrap-close{
+  margin-left: 200px;
+  @include min-pic_24x24;
+  background-image: url("../images/close.svg");
+  background-size: cover;
+  cursor: pointer;
+}

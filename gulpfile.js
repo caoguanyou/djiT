@@ -19,22 +19,28 @@ gulp.task('concatCss',function (done) {//合并css
     gulp.src('./css/*.css')//获取文件
         .pipe(load.concat('index.css'))//合并并命名文件
         .pipe(gulp.dest('./dist/css'));//存放文件
+    done();//结束
+});
+gulp.task('sass', function (done) {
+    gulp.src('./sass/*.css')
+        .pipe(load.sass())
+        .pipe(gulp.dest('./css'));
+    done();
+})
+
+
+gulp.task('uglifyCss',function (done) {//压缩css
     gulp.src('./css/*.css')//获取文件
         .pipe(load.concat('index.css'))//合并并命名文件
         .pipe(load.minifyCss())//压缩
         .pipe(load.rename('index.min.css'))
         .pipe(gulp.dest('./dist/css'))//存放文件
         .pipe(load.connect.reload());
-    done();//结束
+    done();
 });
 
-// gulp.task('uglifyCss',function (done) {//压缩css
-//     gulp.src('./dist/css/*.css')
-//         .pipe(load.minifyCss())
-//         .pipe(gulp.dest('./dist/css/'))
-//
-//     done();
-// });
+
+
 gulp.task('moduleCss', function (done) {
     gulp.src('./module/css/*.css')
         .pipe(gulp.dest('./dist/css'));
@@ -48,6 +54,8 @@ gulp.task('moduleJs',function (done){
     .pipe(gulp.dest('./dist/js'));
     done();
 });
+
+
 
 // js
 gulp.task('concatJs',function (done) {//合并压缩js
@@ -89,7 +97,8 @@ gulp.task('minifyHtml',function (done) {//合并
 
 
 gulp.task('watchs',function (done) {
-    gulp.watch('./css/*.css',gulp.series('concatCss'));
+    gulp.watch('./css/*.css', gulp.series('concatCss','uglifyCss'));
+    gulp.watch('./sass/*scss', gulp.series( 'sass'));
     gulp.watch('./js/*.js', gulp.series('concatJs'));
     gulp.watch('./images/*.*',gulp.series('imageMin'));
     gulp.watch('./*.html', gulp.series('minifyHtml'));
@@ -107,7 +116,7 @@ gulp.task('reload',function (done) {
 gulp.task('start', gulp.series('reload', 'watchs'));
 
 gulp.task('build', gulp.parallel(
-    gulp.series('concatCss', 'moduleCss'),
+    gulp.series('sass','concatCss', 'uglifyCss', 'moduleCss'),
     gulp.series('concatJs', 'uglifyJq','moduleJs'),
     gulp.series('imageMin'),
     gulp.series('minifyHtml'),
