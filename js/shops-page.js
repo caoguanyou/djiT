@@ -1,26 +1,7 @@
 
-/*header*/
-$('.header-search-input').focus(function () {
-    $(this).addClass('header-search-input-avtive')
-});
-$('.header-search-input').blur(function () {
-    $(this).removeClass('header-search-input-avtive')
-});
+$('.shops__header').load('./shop-header.html');
 
-$('.SceneItem-text').hover(
-    function () {
-        $(this).prev('.SceneItem-img-hover').animate({
-            'opacity':'1'
-        },400);
-    },
-    function () {
-        $(this).prev('.SceneItem-img-hover').animate({
-            'opacity':'0'
-        },400)
-    }
-);
-
-
+/*banner轮播图*/
 $(document).ready(function () {
     var shopSwiper = new Swiper ('#shops-swiper-1', {
         // direction: 'vertical', // 垂直切换选项
@@ -49,4 +30,11 @@ $(document).ready(function () {
         }
 
     });
+
+
 });
+/*banner轮播图*/
+
+$('.shops-footer').load('./shop-footer.html');
+
+

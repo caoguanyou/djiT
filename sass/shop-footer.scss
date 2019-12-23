@@ -1,0 +1,206 @@
+/*footer*/
+.wrapx1200{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.shops-footer{
+  width: 100%;
+  background-color: #fff;
+  .features{
+    border-bottom: 1px solid #f0f1f2;
+    ul{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 16px;
+      li.features-item{
+        padding: 48px 16px;
+        color: #6c7073;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        div{
+          height: 48px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          img{
+            height: 100%;
+          }
+        }
+        h4{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .site-footer{
+    padding:72px 0;
+    .footer-category{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-column-gap: 16px;
+      .footer-item{
+        //width: 221px;
+        dl{
+          margin-bottom: 24px;
+        }
+        .nav-title{
+          color: #3B3E40;
+          margin-bottom: 8px;
+          font-size: 12px;
+          line-height: 24px;
+          font-weight: 500;
+        }
+        .nav-item{
+          font-size: 12px;
+
+          line-height: 24px;
+          display: block;
+          margin-bottom: 8px;
+          a{
+            color: #6c7063;
+            -webkit-transition: all .3s ease;
+            transition: all .3s ease;
+            &:hover{
+              color: #1897f2;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-about{
+      margin-top: 40px;
+      padding-bottom:20px;
+      border-bottom: 1px solid #f0f1f2;
+    }
+    .footer-nav{
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: start;
+      justify-content: flex-start;
+      .logo{
+        float: left;
+        img{
+          width: 50px;
+          height: 29px;
+          margin-right: 20px;
+        }
+      }
+      .nav-right{
+        -webkit-box-flex: 1;
+        flex: 1;
+        li{
+          float: left;
+          a{
+            font-size: 12px ;
+            padding: 0 12px;
+            color: #616466;
+            &:hover{
+              color: #1897f2;
+            }
+          }
+        }
+
+      }
+      .footer-social{
+        li{
+          height: 16px;
+          float: left;
+          a{
+            height: 100%;
+            display: block;
+            margin-right: 20px;
+            img{
+              height: 16px;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-bottom{
+      padding-top: 16px;
+      height: 40px;
+      .footer-legal{
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: center;
+        align-items: center;
+        width: 100%;
+        .copyright{
+          font-size: 12px;
+          color: #6c7073;
+          padding-right: 32px;
+        }
+        .legal-links{
+          float: left;
+          li{
+            float: left;
+
+            a{
+              padding-left: 10px;
+              display: inline-block;
+              font-size: 12px;
+              color: #6c7073;
+              -webkit-transition: all .3s ease;
+              transition: all .3s ease;
+              cursor: pointer;
+              &:hover{
+                color: #1897f2;
+              }
+            }
+            .dot{
+              width: 2px;
+              height: 2px;
+              border: 1px solid #6c7073;
+              display: inline-block;
+              vertical-align: middle;
+              margin-left: 8px;
+              border-radius: 50%;
+              background: #6c7073;
+            }
+          }
+        }
+        .footer-feedback{
+          font-size: 12px;
+          padding-left: 10px;
+          color: #616466;
+          .click-in{
+            color: #616466;
+            cursor: pointer;
+            &:hover{
+              color: #1897f2;
+            }
+          }
+        }
+      }
+    }
+    .footer-ad-desc{
+      #J_footer_record{
+        color: #616466;
+        a{
+          color: #616466;
+          cursor: pointer;
+          padding-right: 10px;
+          &:hover{
+            color: #1897f2;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+
+
+/*footer*/

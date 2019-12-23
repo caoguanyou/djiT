@@ -19,7 +19,9 @@
     "url": "https://github.com/caoguanyou/djiT/issues"
   },
   "homepage": "https://github.com/caoguanyou/djiT#readme",
-  "dependencies": {},
+  "dependencies": {
+    "requirejs-text": "^2.0.15"
+  },
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
