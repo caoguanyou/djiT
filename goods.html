@@ -13,20 +13,23 @@
 <body>
 <!--头部-->
 <div class="shops__header"><!--头部导入--></div>
-
+<div class="wrapx1200">
+    <!--面包屑-->
+    <div class="index__breadcrumbs_wrap">
+        <ul class="index__breadcrumbs">
+            <li class="index__breadcrumbs_item first-item"><a href="#">商城首页</a></li>
+            <li class="index__breadcrumbs_item"><a href="#">“御” Mavic 系列</a></li>
+            <li class="index__breadcrumbs_item"><a href="#">御 Mini 系列</a></li>
+            <li class="index__breadcrumbs_item"><a href="#">御 Mavic Mini 航拍小飞机</a></li>
+        </ul>
+    </div>
+</div>
 <div class="main">
     <div class="product">
         <div class="wrapx1200">
-            <!--面包屑-->
-            <div class="index__breadcrumbs_wrap">
-                <ul class="index__breadcrumbs">
-                    <li class="index__breadcrumbs_item first-item"><a href="#">商城首页</a></li>
-                    <li class="index__breadcrumbs_item"><a href="#">“御” Mavic 系列</a></li>
-                    <li class="index__breadcrumbs_item"><a href="#">御 Mini 系列</a></li>
-                    <li class="index__breadcrumbs_item"><a href="#">御 Mavic Mini 航拍小飞机</a></li>
-                </ul>
-            </div>
+
             <div class="product-container">
+               <!--图片&视频-->
                 <div class="slider-container">
                     <div class="style__slider-ctrl">
                         <a href="javascript:;" class="close">X</a>
@@ -90,48 +93,124 @@
                         </div>
                     </div>
                 </div>
+               <!--选购-->
                 <div class="info-container">
-<!--                    title-->
-                    <div class="info-section clearfix">
-                        <h2 class="product-title">御 Mavic Mini 航拍小飞机</h2>
+                  <!--标题-->
+                    <div class="info-section product-title1 clearfix">
+                        <h2 class="product-title" id="product-title">御 Mavic Mini 航拍小飞机</h2>
                         <p class="more"><a href="#" class="a-click">产品概览</a><i class="icon">&gt;</i></p>
                     </div>
-
+               <!--商品-->
                     <div class="info-section">
-                      <div>
-                          <div class="product-title2 clearfix">
+                        <!--套装-->
+                      <div class="style__sections1">
+                          <div class="product-title product-title2 clearfix">
                               <h3 class="style__title">选择套装</h3>
                              <p class="more"> <a href="#" class="a-click">包装清单对比</a></p>
                           </div>
                           <div class="product-suit-list">
-                              <label class="product-suit-item" for="product-suit-001">
-                                  <input type="radio" value="on" id="product-suit-001" class="check">
-                                  <div class="product-suit" >御 Mavic Mini 航拍小飞机</div>
-                                  <div class="price">￥2333</div>
+                              <label class="product-suit-item sytle__input_check_radio1 " for="product-suit-001">
+                                  <div>
+                                      <input type="radio" name="product-suit-chose"  value="on" id="product-suit-001" class=" chose">
+                                      <div class="product-suit title" >御 Mavic Mini 航拍小飞机</div>
+                                      <div class="price">￥2333</div>
+                                  </div>
                               </label>
-                              <label class="product-suit-item" for="product-suit-002">
-                                  <input type="radio" value="on" id="product-suit-002" class="check">
-                                  <div class="product-suit" >御 Mavic Mini 航拍小飞机</div>
-                                  <div class="price">￥2333</div>
+                              <label class="product-suit-item sytle__input_check_radio1" for="product-suit-002">
+                                 <div>
+                                     <input type="radio" name="product-suit-chose"  value="on" id="product-suit-002" class=" chose">
+                                     <div class="product-suit title" >御 Mavic Mini 航拍小飞机</div>
+                                     <div class="price">￥2333</div>
+                                 </div>
+                              </label>
+                          </div>
+                      </div>
+                        <!--配件-->
+                      <div class="style__sections1">
+                          <div class="product-title product-title3 clearfix"><h3 class="style__title">必选配件</h3> </div>
+                          <div class="product-fittings">
+                              <label class="product-fittings-item sytle__input_check_radio1 " for="product-fittings-001">
+                                  <div>
+                                      <input type="checkbox" name="product-fittings-chose"  value="on" id="product-fittings-001" class=" chose">
+                                      <div class="product-fittings title" >
+                                          <div class="imgs">
+                                              <img src="//product4.djicdn.com/uploads/spu/covers/30783/small_8585ef37-707f-46a1-9559-008fe498a05c.png" alt="Cover">
+                                          </div>
+                                          <span>闪迪 microSD卡 32GB</span>
+                                      </div>
+                                      <div class="price">￥179</div>
+                                  </div>
+                              </label>
+                              <label class="product-fittings-item sytle__input_check_radio1 " for="product-fittings-002">
+                                  <div>
+                                      <input type="checkbox" name="product-fittings-chose"  value="on" id="product-fittings-002" class=" chose">
+                                      <div class="product-fittings title" >
+                                          <div class="imgs">
+                                              <img src="//product4.djicdn.com/uploads/spu/covers/30783/small_8585ef37-707f-46a1-9559-008fe498a05c.png" alt="Cover">
+                                          </div>
+                                          <span>闪迪 microSD卡 64GB</span>
+                                      </div>
+                                      <div class="price">￥199</div>
+                                  </div>
+                              </label>
+                              <label class="product-fittings-item sytle__input_check_radio1 " for="product-fittings-003">
+                                  <div>
+                                      <input type="checkbox" name="product-fittings-chose"  value="on" id="product-fittings-003" class=" chose">
+                                      <div class="product-fittings title" >
+                                          <div class="imgs">
+                                              <img src="//product1.djicdn.com/uploads/spu/cover/38f1d184f656706bec2f5a3dc81a4ccb@small.png" alt="Cover">                                          </div>
+                                          <span>御 Mini 机身创作套件</span>
+                                      </div>
+                                      <div class="price">￥1233</div>
+                                  </div>
                               </label>
                           </div>
                       </div>
                     </div>
+                    <!--合计价格-->
+                    <div class="info-section variant-actions">
+                        <div class="title">
+                            <p>总计：</p>
+                        </div>
+                        <div class="price">
+                            <div class="curent-price">￥0</div>
+                            <p class="curent-tips">购买此商品可获取等值 <span class="tips">¥0.00</span>  <a href="#"> DJI 币</a></p>
+                        </div>
+                        <div class="affirm-bay container-fluid">
+                            <button class="btn-pay btn btn-sm btn-primary col-lg-12 col-md-12">开始选购</button>
+                        </div>
+                        <table class="styles__price-detail-vertical">
+                            <tbody>
+                            <tr >
+                                <td >邮费:</td>
+                                <td >免费</td>
+                            </tr>
+                            <tr >
+                                <td >预计发货日期:</td>
+                                <td >发货时间为订单付款后3-5个工作日。</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="styles__installment"><i class="icon"></i><a href="#">分期最低月付¥123.71起</a></div>
+                    </div>
+                    <div class="info-section variant-actions">
+                        <p>新品首发，限量售卖，每人限购一台，超量订单将会被取消。</p>
+                    </div>
 
                 </div>
+
             </div>
             <div class="section-container"></div>
             <div class="section-container"></div>
             <div class="section-container"></div>
         </div>
     </div>
+
+    <!--底部-->
+    <div class="shops-footer"><!--底部导入--></div>
 </div>
 
-
-<!--底部-->
-<div class="shops-footer"><!--底部导入--></div>
-
-<script src="./js/plugins-4399b3999e.js"></script>
+<script src="./js/plugins-151b8b410a.js"></script>
 <script src="./js/goods.min.js"></script>
 </body>
 </html>

@@ -30,7 +30,6 @@ function bottmSilder() {
     var lf = Math.ceil($('.style__paginations .style__paging-item-active').position().left);
     var wid = $('.style__paginations .style__paging-item-active').width();
 
-
     $('.active_button').animate({
         'left':lf,
         'width':wid+'px',
@@ -94,18 +93,91 @@ $('.img-responsive').click(function () {
     $('.index__breadcrumbs_wrap').prepend(bigImgStyle);
 });
 close.click(function () {
-    console.log($(this));
     $('.bigImgStyle').remove();
 });
 
-var ckechipt = $('.product-suit-list .product-suit-item input');
-/*选择套装*/
-
-
-    if ($('#product-suit-002').is(":checked")){
-        $('#product-suit-001').prop("checked",false);
-    } else  if ($('#product-suit-001').is(":checked")){
-            $('#product-suit-002').prop("checked",false);
+/*套餐*/
+var chose = $('.product-suit-list .chose');
+chose.click(function () {
+    if ($(this).is(":checked")) {
+        $(this).parent().parent().css({'border-color': '#1897f2','background':'#1897f2'})
+            .children().css({"background":"#e6f7ff"}).end()
+            .siblings().css({'border-color': '#1897f2','background':'#fff'})
+            .children().css({"background":"#fff"}).end();
+        $(this).parent().parent().addClass("chose-package").siblings().removeClass("chose-package");
     }
+    countSun();
+});
+
+
+/*配件*/
+var check = $('.product-fittings .chose');
+check.click(function () {
+    if ($(this).is(":checked")) {
+        $(this).parent().parent().css({'border-color': '#1897f2','background':'#1897f2'})
+            .children().css({"background":"#e6f7ff"}).end()
+        $(this).parent().parent().addClass("chose-package");
+
+    }else{
+        $(this).parent().parent().css({'border-color': '#616466','background':'#fff'})
+            .children().css({"background":"#fff"}).end();
+        $(this).parent().parent().removeClass("chose-package");
+    }
+    countSun();
+});
+
+/*合计金额*/
+var sum = 0;
+function countSun() {
+
+    var price = $('.product-suit-list .chose-package').children().find(".price").html();
+    var suits = $('.product-fittings .chose-package');
+    if (price){
+        price = price.replace("￥","");
+        price = parseInt(price)
+    }else {
+        price = 0;
+    }
+    var suitsSum = 0;
+    if (suits){
+        $.each(suits,function (index,item) {
+            var pp =   $(item).children().find(".price").html();
+            pp = pp.replace("￥","");
+            suitsSum += parseInt(pp)
+        });
+    }else {
+        suitsSum = 0;
+    }
+    sum = price + suitsSum;
+    $('.variant-actions .curent-price').html("￥"+sum);
+    $('.variant-actions .curent-tips .tips').html("￥"+sum/100);
+    $('.button_stick_bar .price').html("￥"+(sum));
+
+    return sum;
+}
+
+/*开始选购按钮 -跳转添加购物车*/
+$('.btn-pay').click(function () {
+    var price = $('.product-suit-list .chose-package').children().find(".price").html();
+    var suits = $('.product-fittings .chose-package').children().find(".price").html();
+    if (!price){
+        alert('请选择套餐');
+        return ;
+    }
+    if (!suits){
+        alert('请选择配件');
+        return ;
+    }
+    // var remove = $('.main').detach();
+    var goods = {
+        title:($('#product-title').html()),
+        bill:sum
+    };
+    goods = JSON.stringify(goods);
+
+    setCookie('good',goods,7);
+    var newWindow = window.open('./goods-add_to_shoppingCartl.html','_self');
+    return sum;
+});
 
 
