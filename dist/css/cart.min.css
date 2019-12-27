@@ -1,0 +1,272 @@
+.wrapx1200 {
+  width: 1200px;
+  margin: 0 auto;
+  min-width: 1200px;
+}
+
+.header {
+  height: 64px;
+  border-bottom: 1px solid #f0f1f2;
+}
+.header .Top__pull-left {
+  float: left;
+}
+.header .Top__pull-left .op__pull-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header .Top__pull-left .op__pull-left i {
+  display: block;
+  width: 42px;
+  height: 24px;
+  background-image: url("../images/logo-gray.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 20px;
+}
+.header .Top__pull-left .op__pull-left span {
+  display: block;
+  height: 64px;
+  line-height: 64px;
+  font-size: 16px;
+}
+.header .Top__pull-right {
+  float: right;
+}
+.header .Top__pull-right .styles__nav-options {
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .Top__pull-right .styles__nav-options .space-shu {
+  display: block;
+  height: 24px;
+  line-height: 64px;
+  width: 1px;
+  background-color: #f0f1f2;
+  margin: 0 10px;
+}
+.header .Top__pull-right .styles__nav-options li {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .Top__pull-right .styles__nav-options li > div {
+  height: 48px;
+  line-height: 48px;
+}
+.header .Top__pull-right .styles__nav-options .styles__nav-option {
+  height: 100%;
+}
+
+.main {
+  border-bottom: 1px solid #f0f1f2;
+  padding-bottom: 20px;
+}
+.main .style__content-container {
+  margin: 0 auto;
+  padding: 24px 0 48px;
+  background: #fff;
+}
+.main .shoppingCart-title .col-md-6 {
+  text-indent: 40px;
+}
+.main .space-heng {
+  width: 100%;
+  height: 48px;
+  position: relative;
+}
+.main .space-heng::after {
+  content: "";
+  width: 100%;
+  display: block;
+  background-color: #f0f1f2;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+}
+
+.sectionCartContent {
+  text-align: center;
+}
+
+.row-content {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  box-shadow: 0px 5px 4px 4px #f0f1f2;
+}
+.row-content > div {
+  display: flex;
+  align-items: center;
+}
+
+.row-product-info .Selector__checkbox {
+  width: 20px;
+}
+.row-product-info .goods-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.row-product-info .goods-info .goods-info-img {
+  height: 128px;
+  width: 128px;
+}
+.row-product-info .goods-info .goods-info-img img {
+  height: 100%;
+  width: 100%;
+}
+.row-product-info .goods-info-text {
+  text-align: left;
+}
+.row-product-info .goods-info-text .product-title {
+  font-size: 18px;
+  line-height: 28px;
+  color: #3B3E40;
+  text-decoration: none;
+}
+.row-product-info .goods-info-text .shoppiing-tips {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.row-price p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.row-num .input-group {
+  padding: 0 50px !important;
+}
+.row-num .input-group .numbers {
+  width: 40px !important;
+  text-align: center;
+  padding: 0;
+}
+.row-num .input-group .numbers-btn {
+  user-select: none;
+  cursor: pointer;
+}
+
+.row-delect .btnDelete {
+  width: 50px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+.row-delect .btnDelete i {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-size: cover;
+  background-image: url("../images/lajitong.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.style__content {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f0f1f2;
+}
+.style__content > div {
+  flex: 1;
+}
+.style__content .style__tips-container {
+  width: 100%;
+}
+.style__content .style__tips-container > section {
+  width: 100%;
+}
+.style__content .style__tips-container > section .Tips__item {
+  margin-top: 24px;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.style__content .style__tips-container > section .Tips__item .Tips__title {
+  line-height: 16px;
+  font-size: 14px;
+}
+.style__content .style__tips-container > section .Tips__item .Tips__desc {
+  font-size: 12px;
+  line-height: 16px;
+  color: #6c7073;
+}
+.style__content .style__tips-container > section .Tips__item .Tips__desc a {
+  color: #1897f2;
+}
+.style__content .style__summary-container {
+  float: right;
+  text-align: right;
+}
+.style__content .style__summary-container .Summary__subtotal {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 16px;
+}
+.style__content .style__summary-container .Summary__shipping-fee {
+  font-size: 12px;
+}
+.style__content .style__summary-container .Summary__shipping-fee .Summary__key {
+  color: #616466;
+  margin-right: 20px;
+}
+.style__content .style__summary-container .Summary__shipping-fee .Summary__value {
+  color: #3B3E40;
+}
+.style__content .style__summary-container .Summary__shipping-fee .Summary__installment {
+  font-size: 14px;
+  line-height: 24px;
+  color: #6c7073;
+}
+.style__content .Tips__item {
+  margin-right: 16px;
+}
+.style__content .Tips__item i.Tips__icon {
+  display: block;
+  font-size: 16px;
+  height: 16px;
+  width: 18px;
+  font-weight: 300;
+  vertical-align: text-top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.style__content .Tips__item ._2bT-Y {
+  background-image: url("../images/jinbi.png");
+}
+.style__content .Tips__item ._1lH5w {
+  background-image: url("../images/quan.png");
+}
+
+.cart__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart__btn > div {
+  margin: 20px 0;
+  width: 276px;
+  height: 48px;
+}
+.cart__btn > div .btn {
+  width: 100%;
+  height: 100%;
+}

@@ -76,6 +76,12 @@ html,body{
       }
     }
     .Account__sign{
+      height: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 40px;
       span.Account__sign-shu{
         width: 24px;
         height: 12px;
@@ -84,6 +90,29 @@ html,body{
         line-height: 12px;
         text-align: center;
         display: inline-block;
+      }
+      .Account__signHover{
+        display: none;
+        position: absolute;
+        z-index: 999;
+        top: 40px;
+        padding-top: 5px;
+        background-color: #fff;
+        li{
+          &:hover{
+            background-color: rgba(0,0,0,0.1);
+          }
+          &:hover a{
+            color: #1897f2;
+          }
+          padding: 10px 5px;
+          a{
+            font-size: 14px;
+            color: #3B3E40;
+            width: 130px;
+            display: block;
+          }
+        }
       }
     }
   }
@@ -236,7 +265,7 @@ div.header-sub-menu{
     }
     div.header-sub-menu-item{
       width: 840px;
-      overflow: hidden;
+      //overflow: hidden;
       padding:10px 20px 20px;
       display: flex;
       justify-content: flex-start;

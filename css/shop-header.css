@@ -78,6 +78,14 @@ html, body {
   line-height: 16px;
   font-weight: 600;
 }
+.shops-header-top-right .Account__sign {
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 40px;
+}
 .shops-header-top-right .Account__sign span.Account__sign-shu {
   width: 24px;
   height: 12px;
@@ -86,6 +94,29 @@ html, body {
   line-height: 12px;
   text-align: center;
   display: inline-block;
+}
+.shops-header-top-right .Account__sign .Account__signHover {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  top: 40px;
+  padding-top: 5px;
+  background-color: #fff;
+}
+.shops-header-top-right .Account__sign .Account__signHover li {
+  padding: 10px 5px;
+}
+.shops-header-top-right .Account__sign .Account__signHover li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.shops-header-top-right .Account__sign .Account__signHover li:hover a {
+  color: #1897f2;
+}
+.shops-header-top-right .Account__sign .Account__signHover li a {
+  font-size: 14px;
+  color: #3B3E40;
+  width: 130px;
+  display: block;
 }
 
 .shops-header-wrap {
@@ -236,7 +267,6 @@ div.header-sub-menu .wrapx1200 ul.header-sub-menu-head li.sub-menu-item i.sub-me
 }
 div.header-sub-menu .wrapx1200 div.header-sub-menu-item {
   width: 840px;
-  overflow: hidden;
   padding: 10px 20px 20px;
   display: flex;
   justify-content: flex-start;

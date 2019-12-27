@@ -133,7 +133,6 @@ body {
   flex: 1;
   box-sizing: border-box;
   padding: 0 10px;
-  height: 100%;
   position: relative;
 }
 
@@ -142,6 +141,7 @@ body {
   transition: all .5s;
 }
 .SceneItem a.SceneItem-product {
+  height: 483px;
   color: #3B3E40;
   display: block;
   position: relative;
@@ -220,7 +220,7 @@ body {
 }
 
 .shops-event-banner-section {
-  margin-bottom: 16px;
+  margin-bottom: 48px;
 }
 .shops-event-banner-section .wrapx1200 {
   display: grid;
@@ -241,7 +241,7 @@ body {
   width: 100%;
   top: 50px;
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .hoverStyle:hover {
@@ -252,7 +252,7 @@ body {
 }
 
 .sections {
-  margin-bottom: 16px;
+  margin-bottom: 48px;
 }
 .sections .wrapx1200 {
   display: grid;
@@ -290,6 +290,7 @@ body {
   width: 100%;
 }
 .sections .sections-main .content-grup a {
+  min-height: 400px;
   color: #3B3E40;
   display: flex;
   justify-content: center;

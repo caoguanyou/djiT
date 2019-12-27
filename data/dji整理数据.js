@@ -3,7 +3,7 @@ var fs = require('fs');
 
 
 
-toJson(home_banner(),'./data/home_banner.json')
+// toJson(home_banner(),'./data/home_banner.json')
    // banner
 function home_banner() {
     var title = ["重塑生产力", "你也能飞", "大，有可为", "随手掌控，一拍即合", "竞速视界，更快更清晰", "轻装上阵，何惧挑战", "玩出名堂", "转动随心，灵感不停", "重塑生产力"]
@@ -152,7 +152,41 @@ return json;
 
 
 
+goodsList1 = {
+    "cover": ["https://product1.djicdn.com/uploads/spu/cover/c6c83868900ea913e1aacdbd0d59cc87@retina_small.png",
+        "https://product4.djicdn.com/uploads/sku/covers/31314/small_55e19eff-2d6a-4d75-8e63-b9b5822fd298@2x.png",
+        "https://product4.djicdn.com/uploads/sku/covers/30934/small_beceb8fe-c7d6-41c9-9d36-e6b608c7f059@2x.png",
+        "https://product4.djicdn.com/uploads/spu/covers/30436/small_5e5875f9-f465-470c-b16c-bfd779e40536@2x.png",
+        "https://product1.djicdn.com/uploads/spu/cover/86eaf05b348ace444f7735e4007b5d87@retina_small.png",
+        "https://product2.djicdn.com/uploads/spu/cover/01ac2df3b41d1494f9448cbc93a4375e@retina_small.png",
+        "https://product3.djicdn.com/uploads/spu/cover/0989ab05543680ec46759892d63c7993@retina_small.png",
+        "https://product2.djicdn.com/uploads/spu/cover/38f1d184f656706bec2f5a3dc81a4ccb@retina_small.png",],
 
+    "hover": ["https://product2.djicdn.com/uploads/spu/hover/ff289a8784be4c30c7a63372d4520972@origin.jpg",
+        "https://product2.djicdn.com/uploads/spu/hovers/30636/12067932-25e2-4838-b180-812068dadfb1.jpg",
+        "https://product4.djicdn.com/uploads/spu/hovers/30436/590ab73c-ecf7-407a-aab1-3754d37fece0.jpg",
+        "https://product2.djicdn.com/uploads/spu/hover/5702a9093da0a46c5e2a5f5cfbceecdb@origin.jpg",
+        "https://product2.djicdn.com/uploads/spu/hover/d2ee48b94451793282113eb88ef6d26b@origin.jpg",
+        "https://product2.djicdn.com/uploads/spu/hover/d0395f281304133e40b061fd591afd30@origin.jpg",
+        "https://product2.djicdn.com/uploads/spu/hover/06b5acf1adeac8ab64069935d55cd803@origin.jpg",],
+    "des": ["套装比单机多含两块电池、两对桨叶、一个全向桨叶保护罩、一个充电管家、一个 18 W",
+        "可折叠，体积小，性能强，只为与你随行，展开新视界。",
+        "更安静，更尽兴",
+        "30 分钟续航。",
+        "造型小巧，噪音更低，经过精密的动平衡检验，为御 Mini 提供强大拉力。",
+        "让御 Mini 在充电时也可以很有艺术感。",
+        "含彩色马克笔和多种贴纸，让每个人都能为御 Mini 打造专属机身。",
+        ],
+    "price": ["¥3399",
+        "9488",
+        "¥4999",
+        "¥6499",
+        "¥299",
+        "¥69",
+        "¥199",
+        "¥69",
+        ]
+}
 
 
 
@@ -187,8 +221,15 @@ function toJson(arr, way) {
         }
     })
 
-  
-
 }
 
 
+fs.readFile('./data/home_banner.json','utf8',function(err,data){
+    if (err) {
+        console.log(err);
+        
+    }else{
+        console.log(data);
+        
+    }
+})

@@ -19,6 +19,83 @@ $('.SceneItem-text').hover(
         },400)
     }
 );
+
+
+
+
+var _Sign = function () {
+   var ele =  `<span class="Account__sign-shu">|</span>
+            <a href="javascript:;" class="top-item login myAccount">&nbsp;&nbsp;我的账号&nbsp;&nbsp;</a>
+            <span class="Account__sign-shu">|</span>
+            <ul class="Account__signHover">
+                <li><a href="#" class="top-item">我的账号</a></li>
+                <li><a href="#" class="top-item">我的订单</a></li>
+                <li><a href="#" class="top-item">退出</a></li>
+            </ul>`
+    $('.Account__sign').html("").append(ele)
+    $('.Account__sign').addClass('sign');
+
+};
+var _noSign = function () {
+   var ele =  ` <span class="Account__sign-shu">|</span>
+                    <a href="./login_reg.html?login" class="top-item login">登陆</a>
+                    <span class="Account__sign-shu">|</span>
+                    <a href="./login_reg.html?register" class="top-item register">注册</a>
+                    <span class="Account__sign-shu">|</span>`
+    $('.Account__sign').html("").append(ele);
+    $('.Account__sign').removeClass('sign');
+};
+/*登陆状态*/
+/*cookie自动登陆*/
+autoSign(_noSign,_Sign);/*发布了订阅消息*/
+function autoSign(_noSign,_Sign){
+    require(["pub-sub.min","cookie.min"],function (login_register,cookie)  {
+        var user = cookie.getCookie('username');
+        var pass = cookie.getCookie('userpass');
+        console.log(user);
+        var act = 'login';
+        if (user && pass) {
+            $.ajax({
+                type: 'get',
+                url: `/${act}`,
+                data: `act=${act}&username=${user}&password=${pass}`,
+                success: function (data) {
+                    var json = JSON.parse(data);
+                    // '{"err":"1","msg":"${result"}';
+                    if ((json.err === '1')){//如果登陆成功输出1，失败输出0
+                        login_register.trigger('登陆成功', json);//TODO:使用发布订阅模式 登陆
+                        _Sign()
+                    }
+                    else if ((json.err === '0')){
+                        _noSign();
+                        $('.tips').html(json.msg);
+                    }else {
+                        _noSign();
+                        $('.tips').html('出错');
+                    }
+                }
+            });
+        }else {
+            _noSign();
+        }
+
+    });
+}
+
+/*登陆成功的菜单栏hover显示*/
+$('.shops-header-top-right .Account__sign').hover(
+    function () {
+        $(this).find('.Account__signHover').css('display','block')
+    },
+    function () {
+        $(this).find('.Account__signHover').css('display','none')
+    }
+);
+
+
+
+
+
 /*二级菜单*/
 (function () {
     function subMenuShow(){

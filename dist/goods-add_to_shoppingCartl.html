@@ -95,6 +95,16 @@
 <script>
     $('.shops__header').load('./shop-header.html');
 
+    var code = location.href.split("?")[1];
+
+    ajax({"data":code},function (data) {
+        console.log(data['product_title']);
+
+        $('.shoppiing-info-img img').prop('src',data['cover_image']);
+        $('.shoppiing-info .tit').prop('src',data['product_title']);
+
+});
+
     /*dji care的样式功能*/
     var djiCareChose = $('.dji-care-chose .chose');
     djiCareChose.click(function () {
@@ -138,6 +148,23 @@
         };
         setCookie('shoppingCart',goods,7);
     });
+
+
+
+
+    /*ajax请求数据*/
+    function ajax(data,cb) {
+        $.ajax({
+            url:'/product',
+            type: 'get',
+            data: data,
+            dataType: "json",
+            success: cb,
+            error : function (err) {
+                console.log(err)
+            }
+        });
+    }
 
 </script>
 </body>

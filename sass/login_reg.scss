@@ -1,0 +1,180 @@
+/*登陆注册*/
+body,html{
+    background-color: #eee;
+}
+.wrapx1200{
+    width: 1000px;
+    margin: 100px auto 0;
+    background-color: #fff;
+    min-height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0px 0px 10px 1px #333333;
+    &>div{
+        height: 660px;
+        position: relative;
+    }
+    .left{
+
+    }
+}
+.left{
+    position: relative;
+    .logo{
+        position: absolute;
+        left: 40px;
+        top: 40px;
+        z-index: 100;
+        img{
+            height: 40px;
+
+        }
+    }
+}
+#loginSwipre{
+    height: 100%;
+    .swiper-wrapper{
+        height: 100%;
+        width: 500px;
+
+        .swiper-text{
+            position: absolute;
+            right: 40px;
+            bottom: 70px;
+            color: #fff;
+            text-align: right;
+        }
+    }
+    .swiper-slide{
+        width: 100%;
+        height: 100%;
+        background-position: center ;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.right{
+    position: relative;
+    .login_register{
+        width: 300px;
+        height: 380px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        .register-logo{
+            position: absolute;
+            top: -50px;
+            padding-bottom:20px;
+            left: 50%;
+            width: 100%;
+            transform: translateX(-50%);
+            img{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 40px;
+
+            }
+        }
+
+        .text-center{
+            text-align: center;
+            font-size: 30px;
+            font-weight: 400;
+            color: #3B3E40;
+        }
+        .formArea{
+            margin-top: 10px;
+            position: relative;
+            width: 300px;
+
+            .name{
+                border: 1px solid #f0f1f2;
+                margin-bottom:20px ;
+                position: relative;
+                input{
+                    height: 44px;
+                    width: 100%;
+                    padding: 20px 0 0 10px;
+                    color: #616466;
+                    border: none;
+                }
+            }
+            .holder{
+                position: absolute;
+                font-size: 16px;
+                height: 18px;
+                top: 0px;
+                left: 10px;
+                bottom: 0px;
+                color: #616466;
+                margin-top: auto;
+                margin-bottom: auto;
+                font-weight: unset;
+            }
+            .pass{
+                position: relative;
+                border: 1px solid #f0f1f2;
+                margin-bottom:20px ;
+                .forget{
+                    position: absolute;
+                    top: 0px;
+                    right: 10px;
+                    font-size: 14px;
+                    height: 16px;
+                    bottom: 0px;
+                    color: #1897f2;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                }
+                input{
+                    position: relative;
+                    height: 44px;
+                    width: 200px;
+                    padding: 20px 0 0 10px;
+                    color: #616466;
+                    border: none;
+                }
+            }
+            .submit-btn{
+                width: 100%;
+                .btn{
+                    width: 100%;
+                    padding: 10px 0;
+                    font-size: 16px;
+                }
+                .tips{
+                    line-height: 40px;
+                    font-size: 14px;
+                    color: darkred;
+                    padding-left: 10px;
+                    //display: none;
+                }
+            }
+        }
+        .dji-link{
+            text-align: center;
+            margin: 10px 0;
+            width: 100%;
+            display: block;
+            color: #44a8f2;
+            cursor: pointer;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.footer{
+    .footer-container{
+        width: 1000px;
+        margin: 0 auto;
+        padding: 16px 0;
+        line-height: 24px;
+    }
+}
+

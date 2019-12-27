@@ -208,10 +208,33 @@ a.a-click{
     }
   }
 }
+/*数量*/
+.row-num{
+  width: 100%;
+  padding: 10px 195px;
+  text-align: center;
+  .numbersgroup{
+    position: relative;
+    &::before{
+      font-size: 16px;
+      content: "选购数量:";
+      height: 35px;
+      line-height: 35px;
+      display: inline-block;
+      position: absolute;
+      left: -70px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
 
 /*套装&配件样式*/
 .info-section{
   margin-top: 20px;
+}
+.style__sections-fittings{
+  display: none!important;
 }
 .sytle__input_check_radio1{
   border:1px solid #9fa3a6;
@@ -464,5 +487,37 @@ a.a-click{
       }
     }
 
+  }
+}
+
+.product-detail{
+  width: 100%;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #f0f1f2;
+  .title{
+    margin: 16px 0;
+    line-height: 40px;
+    font-size: 24px;
+    text-align: center;
+    border-bottom: 1px solid #1897f2;
+  }
+  .temp-specs-table{
+    padding: 60px 100px;
+    .temp-specs-tr{
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      border-bottom: 1px solid  #f0f1f2;
+      font-size: 18px;
+      color: #707473;
+      .name{
+        width: 240px;
+        padding:30px 0;
+      }
+      .value{
+        flex: 1;
+        padding:30px 0 30px 10px;
+      }
+    }
   }
 }

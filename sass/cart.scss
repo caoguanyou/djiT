@@ -1,0 +1,282 @@
+
+.wrapx1200{
+  width: 1200px;
+  margin: 0 auto;
+  min-width: 1200px;
+}
+
+.header{
+  height: 64px;
+  border-bottom: 1px solid #f0f1f2;
+  .Top__pull-left{
+    float: left;
+    .op__pull-left{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      i{
+        display: block;
+        //margin-top: 20px;
+        width: 42px;
+        height: 24px;
+        background-image: url('../images/logo-gray.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 20px;
+      }
+      span{
+        display: block;
+        height: 64px;
+        line-height: 64px;
+        font-size: 16px;
+      }
+    }
+  }
+  .Top__pull-right{
+    float: right;
+    .styles__nav-options{
+      height: 64px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .space-shu{
+        display: block;
+        height: 24px;
+        line-height: 64px;
+        width: 1px;
+        background-color: #f0f1f2;
+        margin: 0 10px;
+      }
+      li{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &>div{
+          height: 48px;
+          line-height: 48px;
+        }
+      }
+      .styles__nav-option{
+        height: 100%;
+      }
+    }
+  }
+}
+
+.main{
+  border-bottom: 1px solid #f0f1f2;
+  padding-bottom: 20px ;
+  .style__content-container{
+    margin: 0 auto;
+    padding: 24px 0 48px;
+    background: #fff;
+  }
+
+  .shoppingCart-title{
+    .col-md-6{
+      text-indent: 40px;
+    }
+  }
+  .space-heng{
+    width: 100%;
+    height: 48px;
+    position: relative;
+    &::after{
+      content: "";
+      width: 100%;
+      display: block;
+      background-color: #f0f1f2;
+      height: 1px;
+      left: 0;
+      position: absolute;
+      top: 50%;
+    }
+  }
+}
+.sectionCartContent{
+  text-align: center;
+}
+.row-content{
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  box-shadow: 0px 5px 4px 4px #f0f1f2;
+  &>div{
+    display: flex;
+    align-items: center;
+  }
+}
+
+.row-product-info{
+  .Selector__checkbox{
+    width: 20px;
+  }
+  .goods-info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .goods-info-img{
+      height: 128px;
+      width: 128px;
+      img{
+        height: 100%;
+        width: 100%;
+      }
+    }
+    &-text{
+      text-align: left;
+      .product-title{
+        font-size: 18px;
+        line-height: 28px;
+        color: #3B3E40;
+        text-decoration: none;
+      }
+     .shoppiing-tips{
+       color: rgba(0,0,0,.65);
+       font-size: 12px;
+       line-height: 16px;
+       font-weight: 400;
+     }
+    }
+  }
+}
+.row-price{
+  p{
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.row-num{
+  .input-group{
+    padding: 0 50px!important;
+    .numbers{
+      width: 40px!important;
+      text-align: center;
+      padding: 0;
+
+    }
+    .numbers-btn{
+      user-select: none;
+      cursor: pointer;
+    }
+
+
+  }
+}
+.row-delect{
+  .btnDelete{
+    width: 50px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    i{
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      background-size: cover;
+      background-image: url("../images/lajitong.png");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+.style__content{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f0f1f2;
+  &>div{
+    flex: 1;
+  }
+  .style__tips-container{
+    width: 100%;
+    &>section{
+      width: 100%;
+      .Tips__item{
+        margin-top: 24px;
+        text-align: left;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .Tips__title{
+          line-height: 16px;
+          font-size: 14px;
+        }
+        .Tips__desc{
+          font-size: 12px;
+          line-height: 16px;
+          color: #6c7073;
+          a{
+            color: #1897f2;
+          }
+        }
+      }
+    }
+  }
+  .style__summary-container{
+    float: right;
+    text-align: right;
+    .Summary__subtotal{
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 16px;
+    }
+    .Summary__shipping-fee{
+      font-size: 12px;
+      .Summary__key{
+        color: #616466;
+        margin-right: 20px;
+      }
+      .Summary__value{
+        color: #3B3E40;
+      }
+      .Summary__installment{
+        font-size: 14px;
+        line-height: 24px;
+        color: #6c7073;
+      }
+    }
+
+  }
+  .Tips__item{
+    margin-right: 16px;
+    i.Tips__icon{
+      display: block;
+      font-size: 16px;
+      height: 16px;
+      width: 18px;
+      font-weight: 300;
+      vertical-align: text-top;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    ._2bT-Y{
+      background-image: url("../images/jinbi.png");
+    }
+    ._1lH5w{
+      background-image: url("../images/quan.png");
+    }
+  }
+}
+.cart__btn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &>div{
+    margin: 20px 0;
+    width: 276px;
+    height: 48px;
+    .btn{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
