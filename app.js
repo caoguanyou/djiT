@@ -4,13 +4,8 @@ const app = express();
 const bodyParser = require('body-parser');
 const router = require('./router/index'); //  引入路由
 
-
 /* 配置资源目录为dist */
 app.use(express.static('./dist'));
-
-
-
-
 
 app.use(bodyParser.urlencoded({
     extends: true
@@ -35,4 +30,4 @@ var server = app.listen(3000, () => {
     const hostname = '10.36.135.7';
     const port = 3000;
     console.log(`Server running at http://${hostname}:${port}/`);
-})
+});

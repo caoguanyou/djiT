@@ -78,7 +78,6 @@ gulp.task('plugins-scripts',function (done) {
         './module/js/jq*.js',
         './module/js/bootstrap*.js',
         './module/js/swiper*.js',
-        './module/js/swiper.animate*.js',
         './module/js/cooki*.js',
     ])
         .pipe(load.concat('plugins.js'))
